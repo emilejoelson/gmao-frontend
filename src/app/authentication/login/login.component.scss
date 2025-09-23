@@ -1,0 +1,131 @@
+/* login.component.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Define GMAO color variables */
+:root {
+  --gmao-primary: #6366F1;
+  --gmao-primary-dark: #4F46E5;
+  --gmao-primary-light: #8B5CF6;
+  --gmao-secondary: #06B6D4;
+  --gmao-accent: #EC4899;
+}
+
+/* Custom animations */
+@keyframes gmaoFloat {
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg); 
+  }
+  50% { 
+    transform: translateY(-20px) rotate(180deg); 
+  }
+}
+
+@keyframes fadeIn {
+  0% { 
+    opacity: 0; 
+    transform: translateY(10px); 
+  }
+  100% { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+@keyframes slideUp {
+  0% { 
+    opacity: 0; 
+    transform: translateY(30px); 
+  }
+  100% { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+@keyframes bounceGentle {
+  0%, 100% { 
+    transform: translateY(-5%); 
+  }
+  50% { 
+    transform: translateY(0); 
+  }
+}
+
+/* Animation classes */
+.animate-gmao-float {
+  animation: gmaoFloat 6s ease-in-out infinite;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.6s ease-out forwards;
+}
+
+.animate-bounce-gentle {
+  animation: bounceGentle 2s infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-spin-slow {
+  animation: spin 3s linear infinite;
+}
+
+/* Custom utility classes */
+.gmao-primary {
+  color: var(--gmao-primary);
+}
+
+.bg-gmao-primary {
+  background-color: var(--gmao-primary);
+}
+
+.gmao-primary-dark {
+  color: var(--gmao-primary-dark);
+}
+
+.bg-gmao-primary-dark {
+  background-color: var(--gmao-primary-dark);
+}
+
+.gmao-primary-light {
+  color: var(--gmao-primary-light);
+}
+
+.bg-gmao-primary-light {
+  background-color: var(--gmao-primary-light);
+}
+
+.gmao-secondary {
+  color: var(--gmao-secondary);
+}
+
+.bg-gmao-secondary {
+  background-color: var(--gmao-secondary);
+}
+
+.gmao-accent {
+  color: var(--gmao-accent);
+}
+
+.bg-gmao-accent {
+  background-color: var(--gmao-accent);
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .login-form {
+    padding: 1.5rem;
+  }
+  
+  .logo-container {
+    transform: scale(0.9);
+  }
+}
