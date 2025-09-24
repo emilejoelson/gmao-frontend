@@ -15,7 +15,12 @@ export type TIconName =
   | 'emailIcon'
   | 'passwordIcon'
   | 'togglePasswordIcon'
-  | 'backIcon';
+  | 'backIcon'
+  | 'loginIcon'
+  | 'alertIcon'
+  | 'eyeOffIcon'
+  | 'eyeIcon'
+  | 'loadingIcon';
 
 @Component({
   selector: 'app-icon',
@@ -177,6 +182,42 @@ export class IconComponent implements OnInit {
                   d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"
                 />
               </svg>`,
+      loginIcon: `<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<title>Login Icon — user + key</title>
+<!-- user circle -->
+<circle cx="22" cy="22" r="10" fill="none"/>
+<!-- user shoulders -->
+<path d="M10 46c0-6.627 5.373-12 12-12h8c6.627 0 12 5.373 12 12" fill="none"/>
+<!-- key shape (login) -->
+<path d="M46 26h8v4h-2v2h-2v2h-2" fill="none"/>
+<circle cx="44" cy="28" r="3" fill="none"/>
+</svg>`,
+      alertIcon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" role="img" aria-labelledby="alertTitle">
+  <title id="alertTitle">Alert</title>
+  <path fill="none" d="M0 0h24v24H0z"/>
+  <path d="M1 21h22L12 2 1 21zM12 16a1.25 1.25 0 1 1 0 2.5A1.25 1.25 0 0 1 12 16zm0-6.5c.55 0 1 .45 1 1v3c0 .55-.45 1-1 1s-1-.45-1-1v-3c0-.55.45-1 1-1z"/>
+</svg>
+`,
+      eyeOffIcon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" role="img" aria-labelledby="eyeOffTitle">
+  <title id="eyeOffTitle">Eye Off</title>
+  <path fill="none" d="M0 0h24v24H0z"/>
+  <path d="M12 5c4.97 0 9 4.02 9 7s-4.03 7-9 7c-1.85 0-3.56-.48-5.02-1.32l1.46-1.46A7.957 7.957 0 0 0 12 19c3.31 0 6.08-2.24 7.17-4-1.02-1.66-3.44-4-7.17-4-1.56 0-2.99.42-4.18 1.12L7.41 7.7A9.952 9.952 0 0 1 12 5zm-9.19-1.19L3.39 2.01 21 19.62 19.59 21 16.5 17.91A9.966 9.966 0 0 1 12 21C7.03 21 3 16.98 3 14c0-1.11.62-2.39 1.81-3.19L2.81 3.81zM9.17 11.83A2.99 2.99 0 0 0 12 15c.82 0 1.57-.33 2.1-.86l-4.93-4.93A2.99 2.99 0 0 0 9.17 11.83z"/>
+</svg>
+`,
+      eyeIcon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" role="img" aria-labelledby="eyeTitle">
+  <title id="eyeTitle">Eye</title>
+  <path fill="none" d="M0 0h24v24H0z"/>
+  <path d="M12 5c-5 0-9 4-9 7s4 7 9 7 9-4 9-7-4-7-9-7zm0 11.5A4.5 4.5 0 1 1 12 7.5a4.5 4.5 0 0 1 0 9zm0-7a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z"/>
+</svg>
+`,
+      loadingIcon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="24" height="24" role="img" aria-labelledby="loadingTitle">
+  <title id="loadingTitle">Loading</title>
+  <circle cx="25" cy="25" r="20" fill="none" stroke-width="5" stroke-opacity="0.2" />
+  <path d="M45 25A20 20 0 0 1 25 5" fill="none" stroke-width="5" stroke-linecap="round">
+    <animateTransform attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="1s" repeatCount="indefinite"/>
+  </path>
+</svg>
+`,
     };
 
     return svgMap[iconName];
